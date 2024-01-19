@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.bulb {
+  width: 450px;
+  height: 500px;
+  position: relative;
+}
+
+img {
+  border: 1;
+  border-radius: 500px;
+  margin-top: -30px;
+  height: 450px;
+  width: 100%;
+  position: absolute;
+}
+
+img#bulb-on {
+  opacity: 0;
+  animation: glow 3s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn {
+  position: absolute;
+  bottom: 10%;
+  left: 42%;
+}
+
+.btn span {
+  height: 20px;
+  width: 90px;
+  display: inline-block;
+  text-align: center;
+  background: none;
+  border: 2px solid white;
+  border-radius: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn span:hover {
+  background: white;
+  color: black;
+}
+
+#btn:checked ~ .btn span {
+  background: white;
+  color: black;
+}
+
+.btn span:before {
+  content: "turn off";
+}
+
+#btn:checked ~ img#bulb-on {
+  animation: none;
+}
+
+#btn:checked ~ .btn span:before {
+  content: "turn on";
+}
+
+input {
+  display: none;
+}
